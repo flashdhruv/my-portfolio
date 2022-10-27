@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path='my-portfolio/' element={<MainPage/>} />
-          <Route exact path="my-portfolio/Resume" element={<Resume />} />
+          <Route exact path="/Resume" element={<Resume />} />
         </Routes>
     </BrowserRouter>
     

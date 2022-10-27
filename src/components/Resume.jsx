@@ -6,6 +6,7 @@ import Work from './work';
 import Skills from './skills';
 import Projects from './projects';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from './navbar';
 
 //import {getResumes} from '../services/fakeResumeService';
 
@@ -88,7 +89,7 @@ class Resume extends Component {
         
         return (
         <div>
-              
+            
             <Intro name = {this.state.resumes.name} bio = {this.state.resumes.bio}/>
             <BasicInfo email = {this.state.resumes.email} linkedin = {this.state.resumes.linkedin} phone={this.state.resumes.phoneNumber}/>
             <div className="row align-items-start">
