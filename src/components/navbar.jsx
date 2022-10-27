@@ -20,6 +20,9 @@ const Navbar = () => {
   <Link className="nav-link active" style={{color:"#DBE8D4", cursor:'pointer'}} to="About" spy={true} smooth={true} offset={50} duration={500}> About </Link>
   </li>
   <li className="nav-item">
+  <Link className="nav-link active" style={{color:"#DBE8D4", cursor:'pointer'}} to="Socials" spy={true} smooth={true} offset={50} duration={500}> Socials </Link>
+  </li>
+  <li className="nav-item">
     <NavLink className="nav-link" style={{color:"#DBE8D4", cursor:'pointer'}} to="/Resume">Resume</NavLink>
   </li>
 </ul>

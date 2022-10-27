@@ -4,6 +4,7 @@ import About from './about';
 import MoreAbout from './moreAbout';
 import Navbar from './navbar';
 import Projects from './project';
+import Socials from './socials';
 
 
 const MainPage = () => {
@@ -13,6 +14,8 @@ const MainPage = () => {
             <About/>
             <Projects/>
             <MoreAbout/>
+            <Socials/>
+            <ParticlesBackground/>
         </div>
      );
 }

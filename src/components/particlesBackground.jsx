@@ -1,89 +1,53 @@
+import { useCallback } from "react";
+import { useMemo } from "react";
 import Particles from "react-tsparticles";
+import {loadFull} from 'tsparticles';
 
 const ParticlesBackground = () => {
-    return ( 
-        <div>
-            <Particles 
-            options={{
-                background: {
-                    color: '#222733',
+
+    const options = useMemo(() => {
+        return {
+            fullScreen:{
+                enable: true,
+                zIndex: 0
+            },
+            interactivity:{
+                events:{
+                    onHover:{
+                        enable: true,
+                        mode: "repulse",
+                    }
                 },
-                fps_limit: 60,
-                interactivity:{
-                    detectsOn:'canvas',
-                    events:{
-                        resize: true
-                    },
-                },
-                particles:{
-                    color: {
-                        value: '9fafca'
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                            area: 1080
-                        },
-                        limit:0,
-                        value: 400
-                    },
-                    opacity:{
-                        animation:{
-                            enable: true,
-                            minimumValue: 0.05,
-                            speed: 1,
-                            sync: false
-                        },
-                        random:{
-                            enable: true,
-                            minimumValue: 0.05,
-                        },
-                        shape:{
-                            type: "circle",
-                        },
-                        size:{
-                            random: {
-                                enable: true,
-                                minimumValue: 0.5
-                            },
-                            value: 3,
-                            anim: {
-                                enable: true,
-                                speed: 2,
-                                size_min: 0.1,
-                                sync: false
-                            }
-                        },
-                        line_linked: {
-                            enable_auto: true,
-                            distance: 100,
-                            color: "#fff",
-                            opacity: 1,
-                            width: 1,
-                            condensed_mode: {
-                              enable: false,
-                              rotateX: 600,
-                              rotateY: 600
-                            }
-                          },
-                        move: {
-                            enable: true,
-                            speed: 1,
-                            direction: "none",
-                            random: false,
-                            straight: false,
-                            out_mode: "out",
-                            bounce: false,
-                            attract: {
-                              enable: false,
-                              rotateX: 600,
-                              rotateY: 1200
-                            }
-                        }
+                modes:{
+                    repulse:{
+                        distance: 100
                     }
                 }
-            }}/>
-        </div>
+            },
+            particles:{
+                links:{
+                    enable: true,
+                },
+                move:{
+                    enable:true,
+                    speed: { min: 1, max: 5},
+                },
+                opacity:{
+                    value: { min: 0.3, max: 0.7}
+                },
+                size:{
+                    value:{ min: 1, max: 3}
+                }
+            }
+        };
+    }, []);
+
+    const particlesInit = useCallback((engine) => {
+        loadFull(engine);
+    }, []);
+
+    return (        
+        <Particles init={particlesInit} options={options}/> 
      );
 }
  
