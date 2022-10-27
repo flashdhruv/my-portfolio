@@ -13,8 +13,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path='/' element={<MainPage/>} />
-          <Route exact path="/Resume" element={<Resume />} />
+          <Route path='my-portfolio/' element={<MainPage/>} />
+          <Route exact path="my-portfolio/Resume" element={<Resume />} />
         </Routes>
     </BrowserRouter>
     
