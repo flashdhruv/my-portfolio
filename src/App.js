@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   Routes,
   Route,
-  useLocation,
   BrowserRouter
 } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
 import MainPage from './components/mainPage';
 import Resume from './components/Resume';
+import AnimatedRoutes from './components/animatedRoutes';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-          <Route path='my-portfolio/' element={<MainPage/>} />
-          <Route exact path="/Resume" element={<Resume />} />
-        </Routes>
+      <AnimatedRoutes/>
     </BrowserRouter>
-    
   );
 }
 

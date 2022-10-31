@@ -5,10 +5,14 @@ import MoreAbout from './moreAbout';
 import Navbar from './navbar';
 import Projects from './project';
 import Socials from './socials';
+import {motion} from 'framer-motion';
+
 
 
 const MainPage = () => {
     return ( 
+        <motion.div exit={{opacity: 0}}>
+            
         <div style={{backgroundColor:'#222733' , height:'100vh'}}>
             <Navbar/>
             <About/>
@@ -17,6 +21,7 @@ const MainPage = () => {
             <Socials/>
             <ParticlesBackground/>
         </div>
+        </motion.div>
      );
 }
  

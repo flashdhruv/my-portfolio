@@ -6,7 +6,9 @@ import Work from './work';
 import Skills from './skills';
 import Projects from './projects';
 import "bootstrap/dist/css/bootstrap.min.css";
+import {motion} from 'framer-motion';
 import Navbar from './navbar';
+
 
 //import {getResumes} from '../services/fakeResumeService';
 
@@ -88,7 +90,7 @@ class Resume extends Component {
     render() { 
         
         return (
-        <div>
+        <motion.div exit={{opacity: 0}}>
             
             <Intro name = {this.state.resumes.name} bio = {this.state.resumes.bio}/>
             <BasicInfo email = {this.state.resumes.email} linkedin = {this.state.resumes.linkedin} phone={this.state.resumes.phoneNumber}/>
@@ -102,7 +104,7 @@ class Resume extends Component {
                 <   Projects projects={this.state.resumes.projects}/>
                 </div>
             </div>
-        </div>
+        </motion.div>
         );
     }
 }

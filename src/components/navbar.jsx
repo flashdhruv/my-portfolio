@@ -7,7 +7,7 @@ import MainPage from './mainPage';
 
 const Navbar = () => {
     return ( 
-         <nav style={{position:'fixed', margin:'0', width:'100%', backgroundColor:'#525e65', boxShadow:'0 7px 20px 0rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.2)'}}>
+         <nav style={{position:'fixed',top:0, margin:'0', width:'100%', backgroundColor:'#525e65', boxShadow:'0 7px 20px 0rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.2)'}}>
         <div>
             <ul className="nav justify-content-center">
   <li className="nav-item">
